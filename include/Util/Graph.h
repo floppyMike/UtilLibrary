@@ -1,4 +1,5 @@
-#pragma once
+#if not defined _UTILLIB_GRAPH_
+#define _UTILLIB_GRAPH_
 
 #include <vector>
 #include <queue>
@@ -234,3 +235,5 @@ namespace utl
 	}
 
 } // namespace utl
+
+#endif
