@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <Util/Commandline.h>
+#include <Util/Error.h>
 
 TEST(Commandline, Basic)
 {
@@ -11,13 +12,13 @@ TEST(Commandline, Basic)
 	std::string d;
 	std::string ass;
 	arg_to_data(5, ar,
-				Arguments<1, 1, 1, 2>{ .optional_names		  = { "ass" },
-									   .optional_short_names  = { 'c' },
-									   .flag_names			  = { 'a', 'b' },
-									   .required_values		  = { &d },
-									   .optional_values		  = { &ass },
-									   .optional_short_values = { &c },
-									   .flag_values			  = { &a, &b } });
+				utl::Arguments<1, 1, 1, 2>{ .optional_names		   = { "ass" },
+											.optional_short_names  = { 'c' },
+											.flag_names			   = { 'a', 'b' },
+											.required_values	   = { &d },
+											.optional_values	   = { &ass },
+											.optional_short_values = { &c },
+											.flag_values		   = { &a, &b } });
 
 	ASSERT_EQ(a, 2);
 	ASSERT_EQ(b, 1);

@@ -1,4 +1,5 @@
-#pragma once
+#if not defined _UTILLIB_TRAITS_
+#define _UTILLIB_TRAITS_
 
 #include <iterator>
 #include <type_traits>
@@ -74,7 +75,7 @@ namespace utl
 	/**
 	 * @brief Is type same as a bunch of types
 	 */
-	template<typename T, typename ...O>
+	template<typename T, typename... O>
 	concept same_as = std::disjunction_v<std::is_same<T, O>...>;
 
 	/**
@@ -232,3 +233,5 @@ namespace utl
 	using array_iter_cat_t = decltype(detail::_iterator_cat_(std::declval<T>()));
 
 } // namespace utl
+
+#endif
