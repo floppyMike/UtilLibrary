@@ -16,3 +16,4 @@ include_directories(${GTEST_INCLUDE_DIRS})
 link_libraries(Threads::Threads UtilLibrary ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES})
 
 add_executable(Commandline Commandline.cpp)
+add_executable(Graph Graph.cpp)
