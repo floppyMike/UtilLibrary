@@ -1,2 +1,2 @@
-# UtilLibrary
-Common utilities for console c++ projects.
+# CppLib
+Common utilities for c++ projects.
